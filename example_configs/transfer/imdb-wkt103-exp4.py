@@ -33,7 +33,7 @@ base_params = {
   "print_samples_steps": steps,
   "save_checkpoint_steps": steps,
   "load_model": "AWD-WKT103-exp24",
-  "logdir": "IMDB-WKT103-EXP3",
+  "logdir": "IMDB-WKT103-EXP4",
   "lm_vocab_file": '/home/chipn/dev/OpenSeq2Seq/wkt103-processed-data/vocab.txt',
   "processed_data_folder": processed_data_folder,
   "eval_steps": steps,
