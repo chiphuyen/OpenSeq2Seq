@@ -32,7 +32,7 @@ base_params = {
   "print_loss_steps": steps,
   "print_samples_steps": steps,
   "save_checkpoint_steps": steps,
-  "logdir": "AWDWKT103-EXP41",
+  "logdir": "AWDWKT103-EXP48",
   "processed_data_folder": processed_data_folder,
   "eval_steps": steps,
 
@@ -67,7 +67,7 @@ base_params = {
     },
     "encoder_layers": 3,
     "encoder_dp_input_keep_prob": 1.0,
-    "encoder_dp_output_keep_prob": 0.9, # output dropout for middle layer 0.3
+    "encoder_dp_output_keep_prob": 0.95, # output dropout for middle layer 0.3
     "encoder_last_input_keep_prob": 1.0,
     "encoder_last_output_keep_prob": 0.85, # output droput at last layer is 0.4
     "recurrent_keep_prob": 0.8,

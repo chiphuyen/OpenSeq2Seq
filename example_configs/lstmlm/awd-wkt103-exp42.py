@@ -32,7 +32,7 @@ base_params = {
   "print_loss_steps": steps,
   "print_samples_steps": steps,
   "save_checkpoint_steps": steps,
-  "logdir": "AWDWKT103-EXP41",
+  "logdir": "AWDWKT103-EXP42",
   "processed_data_folder": processed_data_folder,
   "eval_steps": steps,
 
@@ -42,7 +42,7 @@ base_params = {
 
   "lr_policy": fixed_lr,
   "lr_policy_params": {
-    "learning_rate": 5e-4
+    "learning_rate": 8e-4
   },
 
   "summaries": ['learning_rate', 'variables', 'gradients', 

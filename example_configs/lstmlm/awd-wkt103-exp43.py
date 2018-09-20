@@ -18,21 +18,21 @@ processed_data_folder = '/data/wkt103-processed-data'
 
 base_model = LSTMLM
 bptt = 96
-steps = 112
+steps = 80
 
 base_params = {
   "restore_best_checkpoint": True,
   "use_horovod": True,
   "num_gpus": 8,
 
-  "batch_size_per_gpu": 96, # conforming to AWD-LSTM paper 80
-  "eval_batch_size_per_gpu": 24,
+  "batch_size_per_gpu": 192, # conforming to AWD-LSTM paper 80
+  "eval_batch_size_per_gpu": 48,
   "num_epochs": 1500, # conforming to AWD-LSTM paper 750
   "save_summaries_steps": steps,
   "print_loss_steps": steps,
   "print_samples_steps": steps,
   "save_checkpoint_steps": steps,
-  "logdir": "AWDWKT103-EXP41",
+  "logdir": "AWDWKT103-EXP43",
   "processed_data_folder": processed_data_folder,
   "eval_steps": steps,
 
@@ -49,9 +49,9 @@ base_params = {
                 'variable_norm', 'gradient_norm', 'global_gradient_norm'],
   # "grad_clip":0.25, # conforming to AWD-LSTM paper
   # "max_grad_norm": 0.25, # conform to paper 0.25
-  "dtype": tf.float32,
-  #"dtype": "mixed",
-  #"automatic_loss_scaling": "Backoff",
+  # "dtype": tf.float32,
+  "dtype": "mixed",
+  "loss_scaling": "Backoff",
   "encoder": LMEncoder,
   "encoder_params": { # will need to update
     "initializer": tf.random_uniform_initializer,

@@ -18,7 +18,7 @@ processed_data_folder = '/data/wkt103-processed-data'
 
 base_model = LSTMLM
 bptt = 96
-steps = 48
+steps = 80
 
 base_params = {
   "restore_best_checkpoint": True,
@@ -34,7 +34,7 @@ base_params = {
   "save_checkpoint_steps": steps,
   "logdir": "AWDWKT103-EXP40",
   "processed_data_folder": processed_data_folder,
-  "eval_steps": steps * 2,
+  "eval_steps": steps,
 
   "optimizer": "Adam", # need to change to NT-ASGD
   "optimizer_params": {},
